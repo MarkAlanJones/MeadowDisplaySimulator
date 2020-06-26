@@ -47,7 +47,7 @@ namespace MeadowDisplaySimulator
 
             Console.WriteLine($"Done {timms}ms");
 
-            DrawMeadowLogo();
+            //DrawMeadowLogo();
         }
 
         int BenchCircles(int num)

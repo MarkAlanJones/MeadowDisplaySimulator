@@ -7,10 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Meadow Display Simulator"
     Width="400"
-    Height="270"
+    Height="300"
     Loaded="Window_Loaded"
     mc:Ignorable="d">
-    <Grid>
-        <Image x:Name="SPIDisplay" MinHeight="240" />
+    <Grid Background="#FF222222">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="5" Grid.Row="1" Grid.Column="1" BorderBrush="#FF333333">
+            <Image x:Name="SPIDisplay" MinHeight="240" MinWidth="240"/>
+        </Border>
     </Grid>
 </Window>
