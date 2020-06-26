@@ -1,0 +1,16 @@
+﻿<Window
+    x:Class="MeadowDisplaySimulator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MeadowDisplaySimulator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Meadow Display Simulator"
+    Width="400"
+    Height="270"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
+    <Grid>
+        <Image x:Name="SPIDisplay" MinHeight="240" />
+    </Grid>
+</Window>
