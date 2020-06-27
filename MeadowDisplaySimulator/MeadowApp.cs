@@ -25,8 +25,7 @@ namespace MeadowDisplaySimulator
 
             graphics = new GraphicsLibrary(display);
 
-            graphics.Rotation = GraphicsLibrary.RotationType._270Degrees;
-            graphics.CurrentFont = new Font12x16();
+            graphics.Rotation = GraphicsLibrary.RotationType.Default;
             graphics.Clear(true);
             DrawMeadowLogo();
         }
@@ -68,7 +67,7 @@ namespace MeadowDisplaySimulator
                     graphics.DrawLine(x, y, x + lineWidth, y, Color.YellowGreen);
                 }
                 else
-                { //fill top of mountain
+                {   //fill top of mountain
                     lineWidth = 38 - (i - height / 2) * 40 / 27;
                     graphics.DrawLine(x, y, x + lineWidth, y, Color.YellowGreen);
                 }
