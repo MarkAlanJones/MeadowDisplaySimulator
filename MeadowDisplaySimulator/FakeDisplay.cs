@@ -108,10 +108,15 @@ namespace MeadowDisplaySimulator
 
         public override void Show()
         {
-            bitmap.Lock();
-            bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
-            bitmap.AddDirtyRect(r);
-            bitmap.Unlock();
+            // update on the UI thread
+            App.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                bitmap.Lock();
+                bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
+                bitmap.AddDirtyRect(r);
+                bitmap.Unlock();
+            }));
+
         }
 
         // Meadow colors are 4 doubles, 0.0 to 1.0 but we want bytes 0 - 255

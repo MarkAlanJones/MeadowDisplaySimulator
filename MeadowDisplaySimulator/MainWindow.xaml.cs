@@ -28,7 +28,8 @@ namespace MeadowDisplaySimulator
         // Run the meadow app - may run forever !
         private void InitializeMeadow(Image meadowdisplay)
         {
-            var F7 = new MeadowApp(meadowdisplay);
+            // Run the meadow code on a background thread, it will have to displatch to UI to update bitmap
+            Task.Factory.StartNew(() => new MeadowApp(meadowdisplay));
         }
     }
 }
