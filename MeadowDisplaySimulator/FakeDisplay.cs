@@ -1,7 +1,6 @@
 ﻿using Meadow.Foundation;
 using Meadow.Foundation.Displays;
 using System;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
@@ -10,8 +9,7 @@ namespace MeadowDisplaySimulator
     // Implement a Meadow Display that can write to the WPF gui
     public class FakeDisplay : DisplayBase
     {
-        // Match what the SPI uses, but our bitmap format is determined by WPF and needs to be PixelFormats.Pbgra32 to be writable
-        public override DisplayColorMode ColorMode => DisplayColorMode.Format16bppRgb565;
+        public override DisplayColorMode ColorMode => DisplayColorMode.Format24bppRgb888;
 
         public override uint Width => width;
 
@@ -108,18 +106,15 @@ namespace MeadowDisplaySimulator
             Default = pen;
         }
 
-        public override async void Show()
+        public override void Show()
         {
             bitmap.Lock();
             bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
             bitmap.AddDirtyRect(r);
             bitmap.Unlock();
-
-            // so you can see what you drew.
-            await Task.Delay(5000);
         }
 
-        // Meadow colours are 4 doubles, 0.0 to 1.0 but we want bytes 0 - 255
+        // Meadow colors are 4 doubles, 0.0 to 1.0 but we want bytes 0 - 255
         // PixelFormats.Pbgra32
         private byte[] Color2Byte(Color c)
         {
