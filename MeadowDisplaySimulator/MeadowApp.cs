@@ -12,6 +12,7 @@ namespace MeadowDisplaySimulator
     /// Put your Meadow code here - note this does not inherit from App<,>
     ///
     /// You need to initialize a FakeDisplay rather than your normal SPI one but otherwise any graphics related code can be tested from here
+    /// The initialize (where the bitmap is given to the display driver) must be on the UI thread.
     /// </summary>
     public class MeadowApp
     {
@@ -31,6 +32,7 @@ namespace MeadowDisplaySimulator
             }));
 
             int timms = BenchCircles(50);
+            Thread.Sleep(1000);
             timms += BenchLines(100);
             Thread.Sleep(1000);
             timms += BenchPix(100);
