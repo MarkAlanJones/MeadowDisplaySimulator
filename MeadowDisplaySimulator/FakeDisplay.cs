@@ -111,10 +111,7 @@ namespace MeadowDisplaySimulator
             // update on the UI thread
             App.Current.Dispatcher.Invoke(new Action(() =>
             {
-                bitmap.Lock();
                 bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
-                bitmap.AddDirtyRect(r);
-                bitmap.Unlock();
             }));
 
         }
