@@ -17,16 +17,13 @@ namespace MeadowDisplaySimulator
         int displayWidth = 240;
         int displayHeight = 240;
 
-        Random rand = new Random();
-
         public MeadowApp(System.Windows.Controls.Image wpfimage)
         {
             display = new FakeDisplay(width: (uint)displayWidth, height: (uint)displayHeight, bitmap: (WriteableBitmap)wpfimage.Source);
-
             graphics = new GraphicsLibrary(display);
-
             graphics.Rotation = GraphicsLibrary.RotationType.Default;
             graphics.Clear(true);
+
             DrawMeadowLogo();
         }
 
