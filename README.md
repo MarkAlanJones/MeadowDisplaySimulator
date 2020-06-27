@@ -9,7 +9,14 @@ I found I could write a display driver that would display in windows, using the 
 Remove the System reference, and re-add the default to resolve.)
 
 In general - you should be able to copy your MeadowApp.cs, and change the constructor and the display definitions, and run with a minimal number of changes.
-Since we are updating the WritableBitmap on the UI thread, we only see the last call to Show. You may want to comment out parts, if you expect the screen to update.
+The MeadowApp code runs on a background Task. The Show method in the display driver, will call back on the UI thread. You must do the same thing when initializing the driver.
+
+e.g.
+
+`            App.Current.Dispatcher.Invoke(new Action(() =>`
+`            {`
+`                Initialize((WriteableBitmap)wpfimage.Source);`
+`            }));`
 
 If you drag the window larger, you can zoom the image for closer inspection.
 
