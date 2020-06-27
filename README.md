@@ -13,5 +13,5 @@ Since we are updating the WritableBitmap on the UI thread, we only see the last 
 
 If you drag the window larger, you can zoom the image for closer inspection.
 
-![Screenshot with Meadow Logo](MeadowDisplaylSimulator.png)
+![Screenshot with Meadow Logo](MeadowDisplaySimulator.png)
 
