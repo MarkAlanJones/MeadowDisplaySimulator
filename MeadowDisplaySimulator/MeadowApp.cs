@@ -31,6 +31,10 @@ namespace MeadowDisplaySimulator
                 Initialize((WriteableBitmap)wpfimage.Source);
             }));
 
+
+            BitmapTest(500);
+            Thread.Sleep(1000);
+
             int timms = BenchCircles(50);
             Thread.Sleep(1000);
             timms += BenchLines(100);
@@ -56,6 +60,40 @@ namespace MeadowDisplaySimulator
             graphics = new GraphicsLibrary(display);
             graphics.Rotation = GraphicsLibrary.RotationType.Default;
             graphics.Clear(true);
+        }
+
+        /// <summary>
+        /// The Graphics Library does not call the Display Bitmap
+        /// Also the graphics library doesn't try and draw out of bounds
+        /// this calls show and clear as well as both drawbitmap methods
+        /// </summary>
+        /// <param name="num"></param>
+        void BitmapTest(int num)
+        {
+            // 8x8 bitmap - crude handdrawn happyface
+            byte[] happy = new byte[] { 0b00111100,
+                                        0b01111110,
+                                        0b01011010,
+                                        0b01111110,
+                                        0b01011010,
+                                        0b01100110,
+                                        0b01111110,
+                                        0b00111100 };
+
+            display.IgnoreOutOfBoundsPixels = true;
+            for (int i = 0; i < num; i++)
+            {
+                display.DrawBitmap(rand.Next(displayWidth), rand.Next(displayHeight), 1, 8, happy, Color.Yellow);
+                display.Show();
+            }
+
+            display.Clear(true);
+            display.SetPenColor(Color.Yellow);
+            for (int i = 0; i < num; i++)
+            {
+                display.DrawBitmap(rand.Next(displayWidth), rand.Next(displayHeight), 1, 8, happy, Meadow.Foundation.Displays.DisplayBase.BitmapMode.And);
+                display.Show();
+            }
         }
 
         int BenchCircles(int num)
