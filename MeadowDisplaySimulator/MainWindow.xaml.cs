@@ -16,7 +16,7 @@ namespace MeadowDisplaySimulator
         {
             InitializeComponent();
 
-            var bm = new WriteableBitmap(240, 240, 96, 96, PixelFormats.Pbgra32, null);
+            var bm = new WriteableBitmap((int)SPIDisplay.MinWidth, (int)SPIDisplay.MinHeight, 96, 96, PixelFormats.Pbgra32, null);
             SPIDisplay.Source = bm;
         }
 
