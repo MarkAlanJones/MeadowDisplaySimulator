@@ -1,6 +1,7 @@
 ﻿using Meadow.Foundation;
 using Meadow.Foundation.Displays;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
@@ -168,9 +169,14 @@ namespace MeadowDisplaySimulator
             App.Current.Dispatcher.Invoke(new Action(() =>
             {
                 bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
-            }));
 
+                if (Directory.Exists(SnapShotPath))
+                    SaveSnapShot(bitmap.Clone());
+            }));
         }
+
+        // Set the SnapShotPath to a valid directory, and a screenshot will be saved each time show is called
+        public string SnapShotPath { get; set; } = null;
 
         // Meadow colors are 4 doubles, 0.0 to 1.0 but we want bytes 0 - 255
         // PixelFormats.Pbgra32
@@ -190,6 +196,26 @@ namespace MeadowDisplaySimulator
             var rand = new Random();
             rand.NextBytes(pixels);
             Show();
+        }
+
+        // Writes the display image to a new PNG image in the SnapShotPath
+        private void SaveSnapShot(BitmapSource img)
+        {
+            string filename = SnapShotFilename();
+            {
+                using (FileStream stream = new FileStream(filename, FileMode.Create))
+                {
+                    PngBitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Frames.Add(BitmapFrame.Create(img));
+                    encoder.Save(stream);
+                }
+            }
+        }
+
+        // Timestamped filename .png
+        private string SnapShotFilename()
+        {
+            return Path.Combine(SnapShotPath, "MeadowSS_" + DateTime.Now.ToString("o").Replace(":", "") + ".png");
         }
     }
 }
