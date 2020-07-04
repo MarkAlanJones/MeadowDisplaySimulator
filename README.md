@@ -20,5 +20,7 @@ e.g.
 
 If you drag the window larger, you can zoom the image for closer inspection.
 
+If you want screenshots saved automatically, just set the display.SnapShotPath to a valid directory, and a timestamped PNG file will be writen each time display.Show() is called.
+
 ![Screenshot with Meadow Logo](MeadowDisplaySimulator.png)
 
