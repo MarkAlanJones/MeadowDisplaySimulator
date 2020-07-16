@@ -61,65 +61,6 @@ namespace MeadowDisplaySimulator
                 Show();
         }
 
-        /// <summary>
-        ///     Display a 1-bit bitmap - specify width in bytes not pixels (8 pixels per byte)
-        ///     copied from TftSpiBase.cs - this version ignores the bitmapMode and draws in the default color
-        ///     I guess Bitmapmode is assumed to be AND
-        /// </summary>
-        public override void DrawBitmap(int x, int y, int width, int height, byte[] bitmap, BitmapMode bitmapMode)
-        {
-            if ((width * height) != bitmap.Length)
-            {
-                throw new ArgumentException("Width and height do not match the bitmap size.");
-            }
-
-            for (var ordinate = 0; ordinate < height; ordinate++)
-            {
-                for (var abscissa = 0; abscissa < width; abscissa++)
-                {
-                    var b = bitmap[(ordinate * width) + abscissa];
-                    byte mask = 0x01;
-
-                    for (var pixel = 0; pixel < 8; pixel++)
-                    {
-                        DrawPixel(x + (8 * abscissa) + pixel, y + ordinate, (b & mask) > 0);
-                        mask <<= 1;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        ///     Display a 1-bit bitmap - specify width in bytes not pixels (8 pixels per byte)
-        ///     copied from TftSpiBase.cs - this version only draws non black pixels
-        /// </summary>
-
-        public override void DrawBitmap(int x, int y, int width, int height, byte[] bitmap, Color color)
-        {
-            if ((width * height) != bitmap.Length)
-            {
-                throw new ArgumentException("Width and height do not match the bitmap size.");
-            }
-
-            for (var ordinate = 0; ordinate < height; ordinate++)
-            {
-                for (var abscissa = 0; abscissa < width; abscissa++)
-                {
-                    var b = bitmap[(ordinate * width) + abscissa];
-                    byte mask = 0x01;
-
-                    for (var pixel = 0; pixel < 8; pixel++)
-                    {
-                        if ((b & mask) > 0)
-                        {
-                            DrawPixel(x + (8 * abscissa) + pixel, y + ordinate, color);
-                        }
-                        mask <<= 1;
-                    }
-                }
-            }
-        }
-
         public override void DrawPixel(int x, int y, Color color)
         {
             if (x >= width)
