@@ -46,6 +46,7 @@ namespace MeadowDisplaySimulator
 
             Console.WriteLine($"Done {timms}ms");
             DrawMeadowLogo();
+
         }
 
         void Initialize(WriteableBitmap wbm)
@@ -53,11 +54,12 @@ namespace MeadowDisplaySimulator
             Console.WriteLine("Initializing...");
 
             display = new FakeDisplay(width: (uint)displayWidth, height: (uint)displayHeight, bitmap: wbm);
+            display.IgnoreOutOfBoundsPixels = true;
             graphics = new GraphicsLibrary(display);
             graphics.Rotation = GraphicsLibrary.RotationType.Default;
             graphics.Clear(true);
         }
-    
+
         int BenchCircles(int num)
         {
             Stopwatch stopWatch = new Stopwatch();

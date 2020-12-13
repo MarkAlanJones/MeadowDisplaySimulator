@@ -63,14 +63,14 @@ namespace MeadowDisplaySimulator
 
         public override void DrawPixel(int x, int y, Color color)
         {
-            if (x >= width)
+            if (x >= width || x < 0)
             {
                 if (IgnoreOutOfBoundsPixels)
                     return;
                 else
                     throw new ArgumentException("OutOfBounds", nameof(x));
             }
-            if (y >= height)
+            if (y >= height || y < 0)
             {
                 if (IgnoreOutOfBoundsPixels)
                     return;
@@ -92,6 +92,40 @@ namespace MeadowDisplaySimulator
                 DrawPixel(x, y, Default);
             else
                 DrawPixel(x, y, Color.Black);
+        }
+
+        /// <summary>
+        /// Invert the color of a single pixel
+        /// </summary>
+        public override void InvertPixel(int x, int y)
+        {
+            if (x >= width || x < 0)
+            {
+                if (IgnoreOutOfBoundsPixels)
+                    return;
+                else
+                    throw new ArgumentException("OutOfBounds", nameof(x));
+            }
+            if (y >= height || y < 0)
+            {
+                if (IgnoreOutOfBoundsPixels)
+                    return;
+                else
+                    throw new ArgumentException("OutOfBounds", nameof(y));
+            }
+
+            var pos = (int)(x + y * width) * 4;
+            byte[] b = new byte[4] { pixels[pos], pixels[pos + 1], pixels[pos + 2], pixels[pos + 3] };
+
+            // invert BRG not A
+            b[0] = (byte)(255 - b[0]);
+            b[1] = (byte)(255 - b[1]);
+            b[2] = (byte)(255 - b[2]);
+
+            pixels[pos] = b[0];
+            pixels[pos + 1] = b[1];
+            pixels[pos + 2] = b[2];
+            pixels[pos + 3] = b[3];
         }
 
         public override void DrawPixel(int x, int y)
