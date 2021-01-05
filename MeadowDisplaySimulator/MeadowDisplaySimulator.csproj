@@ -47,8 +47,8 @@
     <Reference Include="CustomMarshalers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.4.0\lib\net472\CustomMarshalers.dll</HintPath>
     </Reference>
-    <Reference Include="GraphicsLibrary, Version=0.9.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.Foundation.Displays.GraphicsLibrary.0.9.22\lib\net472\GraphicsLibrary.dll</HintPath>
+    <Reference Include="GraphicsLibrary, Version=0.9.26.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.Foundation.Displays.GraphicsLibrary.0.9.26\lib\net472\GraphicsLibrary.dll</HintPath>
     </Reference>
     <Reference Include="I18N, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.4.0\lib\net472\I18N.dll</HintPath>
@@ -74,11 +74,11 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=4.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.4.0\lib\net472\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Meadow, Version=0.18.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.0.18.0\lib\net472\Meadow.dll</HintPath>
+    <Reference Include="Meadow, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.0.19.0\lib\net472\Meadow.dll</HintPath>
     </Reference>
-    <Reference Include="Meadow.Foundation, Version=0.20.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.Foundation.0.20.0\lib\net472\Meadow.Foundation.dll</HintPath>
+    <Reference Include="Meadow.Foundation, Version=0.21.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.Foundation.0.21.0\lib\net472\Meadow.Foundation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.4.0\lib\net472\Microsoft.CSharp.dll</HintPath>
