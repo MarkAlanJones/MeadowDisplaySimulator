@@ -12,12 +12,12 @@ namespace MeadowDisplaySimulator
     {
         public override DisplayColorMode ColorMode => DisplayColorMode.Format24bppRgb888;
 
-        public override uint Width => width;
+        public override int Width => width;
 
-        public override uint Height => height;
+        public override int Height => height;
 
-        protected uint width;
-        protected uint height;
+        protected int width;
+        protected int height;
         protected WriteableBitmap bitmap;
         protected Int32Rect r;
         protected Color Default;
@@ -26,7 +26,7 @@ namespace MeadowDisplaySimulator
         /// <summary>
         /// Construct the display with a WritableBitmap
         /// </summary>
-        public FakeDisplay(uint width, uint height, WriteableBitmap bitmap)
+        public FakeDisplay(int width, int height, WriteableBitmap bitmap)
         {
             if (bitmap.Height >= height && bitmap.Width >= width)
                 this.bitmap = bitmap;

@@ -53,7 +53,7 @@ namespace MeadowDisplaySimulator
         {
             Console.WriteLine("Initializing...");
 
-            display = new FakeDisplay(width: (uint)displayWidth, height: (uint)displayHeight, bitmap: wbm);
+            display = new FakeDisplay(width: displayWidth, height: displayHeight, bitmap: wbm);
             display.IgnoreOutOfBoundsPixels = true;
             graphics = new GraphicsLibrary(display);
             graphics.Rotation = GraphicsLibrary.RotationType.Default;
