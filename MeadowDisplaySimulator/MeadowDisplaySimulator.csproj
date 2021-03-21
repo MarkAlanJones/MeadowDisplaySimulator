@@ -53,345 +53,345 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Accessibility.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Accessibility.dll</HintPath>
     </Reference>
     <Reference Include="Commons.Xml.Relaxng, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Commons.Xml.Relaxng.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Commons.Xml.Relaxng.dll</HintPath>
     </Reference>
     <Reference Include="cscompmgd, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\cscompmgd.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\cscompmgd.dll</HintPath>
     </Reference>
     <Reference Include="CustomMarshalers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\CustomMarshalers.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\CustomMarshalers.dll</HintPath>
     </Reference>
-    <Reference Include="GraphicsLibrary, Version=0.9.34.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.Foundation.Displays.GraphicsLibrary.0.9.34\lib\net472\GraphicsLibrary.dll</HintPath>
+    <Reference Include="GraphicsLibrary, Version=0.9.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.Foundation.Displays.GraphicsLibrary.0.9.38\lib\net472\GraphicsLibrary.dll</HintPath>
     </Reference>
     <Reference Include="I18N, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.dll</HintPath>
     </Reference>
     <Reference Include="I18N.CJK, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.CJK.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.CJK.dll</HintPath>
     </Reference>
     <Reference Include="I18N.MidEast, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.MidEast.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.MidEast.dll</HintPath>
     </Reference>
     <Reference Include="I18N.Other, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.Other.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.Other.dll</HintPath>
     </Reference>
     <Reference Include="I18N.Rare, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.Rare.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.Rare.dll</HintPath>
     </Reference>
     <Reference Include="I18N.West, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\I18N.West.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\I18N.West.dll</HintPath>
     </Reference>
     <Reference Include="IBM.Data.DB2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\IBM.Data.DB2.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\IBM.Data.DB2.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=4.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Meadow, Version=0.21.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.0.21.0\lib\net472\Meadow.dll</HintPath>
+    <Reference Include="Meadow, Version=0.22.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.0.22.0\lib\net472\Meadow.dll</HintPath>
     </Reference>
-    <Reference Include="Meadow.Foundation, Version=0.23.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Meadow.Foundation.0.23.0\lib\net472\Meadow.Foundation.dll</HintPath>
+    <Reference Include="Meadow.Foundation, Version=0.24.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meadow.Foundation.0.24.0\lib\net472\Meadow.Foundation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Microsoft.CSharp.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Microsoft.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualC, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Microsoft.VisualC.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Microsoft.VisualC.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Btls.Interface, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Btls.Interface.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Btls.Interface.dll</HintPath>
     </Reference>
     <Reference Include="Mono.C5, Version=1.1.1.0, Culture=neutral, PublicKeyToken=ba07f434b1c35cbd, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.C5.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.C5.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Cairo.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Cairo.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.11.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Cecil.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Mdb, Version=0.11.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Cecil.Mdb.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CodeContracts, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.CodeContracts.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.CodeContracts.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CompilerServices.SymbolWriter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.CompilerServices.SymbolWriter.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.CompilerServices.SymbolWriter.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Configuration.Crypto, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Configuration.Crypto.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Configuration.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.CSharp.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Data.Sqlite.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Data.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Data.Tds, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Data.Tds.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Data.Tds.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Debugger.Soft, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Debugger.Soft.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Debugger.Soft.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Http.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Http.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Management.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Management.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Messaging.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Messaging.RabbitMQ, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Messaging.RabbitMQ.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Messaging.RabbitMQ.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Options, Version=0.2.3.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Options.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Options.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Parallel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Parallel.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Parallel.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Posix.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Posix.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Profiler.Log, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Profiler.Log.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Profiler.Log.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Security.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security.Win32, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Security.Win32.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Security.Win32.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Simd, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Simd.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Simd.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Tasklets, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.Tasklets.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.Tasklets.dll</HintPath>
     </Reference>
     <Reference Include="Mono.WebBrowser, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.WebBrowser.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.WebBrowser.dll</HintPath>
     </Reference>
     <Reference Include="Mono.XBuild.Tasks, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Mono.XBuild.Tasks.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Mono.XBuild.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="monodoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\monodoc.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\monodoc.dll</HintPath>
     </Reference>
     <Reference Include="Novell.Directory.Ldap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\Novell.Directory.Ldap.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\Novell.Directory.Ldap.dll</HintPath>
     </Reference>
     <Reference Include="PEAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\PEAPI.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\PEAPI.dll</HintPath>
     </Reference>
     <Reference Include="RabbitMQ.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\RabbitMQ.Client.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\RabbitMQ.Client.dll</HintPath>
     </Reference>
     <Reference Include="SMDiagnostics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\SMDiagnostics.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\SMDiagnostics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ComponentModel.Composition.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ComponentModel.Composition.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ComponentModel.DataAnnotations.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ComponentModel.DataAnnotations.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Configuration.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Configuration.Install.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Configuration.Install.dll</HintPath>
     </Reference>
     <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.DataSetExtensions.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.DataSetExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.Entity.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.Entity.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.Linq.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.OracleClient.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.OracleClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.Services.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.Services.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Data.Services.Client.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Data.Services.Client.dll</HintPath>
     </Reference>
     <Reference Include="System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Deployment.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Design.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Design.dll</HintPath>
     </Reference>
     <Reference Include="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.DirectoryServices.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.DirectoryServices.dll</HintPath>
     </Reference>
     <Reference Include="System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.DirectoryServices.Protocols.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.DirectoryServices.Protocols.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Drawing.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Dynamic.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Dynamic.dll</HintPath>
     </Reference>
     <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.EnterpriseServices.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.EnterpriseServices.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.IdentityModel.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.IdentityModel.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel.Selectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.IdentityModel.Selectors.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.IdentityModel.Selectors.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.IO.Compression.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.IO.Compression.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.IO.Compression.FileSystem.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.IO.Compression.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Json.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Management.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Management.dll</HintPath>
     </Reference>
     <Reference Include="System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Messaging.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Net.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Net.Http.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Net.Http.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Numerics.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Numerics.Vectors.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Core.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Debugger, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Debugger.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Debugger.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Experimental, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Experimental.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Experimental.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Interfaces, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Interfaces.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Linq.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Observable.Aliases, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Observable.Aliases.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Observable.Aliases.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.PlatformServices, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.PlatformServices.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.PlatformServices.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Providers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Providers.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Providers.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Runtime.Remoting, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reactive.Runtime.Remoting.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reactive.Runtime.Remoting.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Context, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Reflection.Context.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Reflection.Context.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.Caching.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.Caching.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.DurableInstancing.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.DurableInstancing.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.Remoting.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.Remoting.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Formatters.Soap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
     </Reference>
     <Reference Include="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Security.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Security.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.Activation.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.Activation.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Discovery, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.Discovery.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.Discovery.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Internals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.Internals.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.Internals.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.Routing.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.Routing.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceModel.Web.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceModel.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.ServiceProcess.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.ServiceProcess.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Threading.Tasks.Dataflow.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Transactions.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Transactions.dll</HintPath>
     </Reference>
     <Reference Include="System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Workflow.Activities.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Workflow.Activities.dll</HintPath>
     </Reference>
     <Reference Include="System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Workflow.ComponentModel.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Workflow.ComponentModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Workflow.Runtime.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Workflow.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Xml.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Xml.Linq.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\System.Xml.Serialization.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="SystemWebTestShim, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.5.0\lib\net472\SystemWebTestShim.dll</HintPath>
+      <HintPath>..\packages\WildernessLabs.Meadow.Assemblies.0.6.0\lib\net472\SystemWebTestShim.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
