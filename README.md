@@ -1,4 +1,4 @@
-# MeadowDisplaySimulator
+# Meadow Display Simulator
 Simulate a display in WPF to test or screen-capture Meadow Graphics Library  apps.
 
 In developing for the Meadow F7 I found taking photos of the SPI LCD Display quite difficult.
@@ -13,10 +13,11 @@ The MeadowApp code runs on a background Task. The Show method in the display dri
 
 e.g.
 
-`            App.Current.Dispatcher.Invoke(new Action(() =>`
-`            {`
-`                Initialize((WriteableBitmap)wpfimage.Source);`
-`            }));`
+```            App.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                Initialize((WriteableBitmap)wpfimage.Source);
+            }));
+```
 
 If you drag the window larger, you can zoom the image for closer inspection.
 
@@ -24,3 +25,5 @@ If you want screenshots saved automatically, just set the display.SnapShotPath t
 
 ![Screenshot with Meadow Logo](MeadowDisplaySimulator.png)
 
+Of Note: This is now a .net 7 Wpf App (Windows Only) - use the .net standard meadow nugets is fine
+Note that Software Rendering had to be enabled to get around issues with the Intel Xe Graphics Drivers and WritableBitmaps
