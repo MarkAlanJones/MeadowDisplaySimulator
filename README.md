@@ -13,7 +13,8 @@ The MeadowApp code runs on a background Task. The Show method in the display dri
 
 e.g.
 
-```            App.Current.Dispatcher.Invoke(new Action(() =>
+```
+            App.Current.Dispatcher.Invoke(new Action(() =>
             {
                 Initialize((WriteableBitmap)wpfimage.Source);
             }));
