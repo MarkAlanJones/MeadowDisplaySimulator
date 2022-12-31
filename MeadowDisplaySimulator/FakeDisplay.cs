@@ -108,12 +108,7 @@ namespace MeadowDisplaySimulator
             // update on the UI thread
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                // Calling this method is the equivalent of using the Lock and Unlock workflow described in the WriteableBitmap class remarks.
-                //bitmap.Lock();
                 bitmap.WritePixels(r, pixelbuffer.Buffer, bitmap.BackBufferStride, 0, 0);
-
-                //bitmap.AddDirtyRect(r);
-                //bitmap.Unlock();
 
                 if (Directory.Exists(SnapShotPath))
                     SaveSnapShot(bitmap.Clone());
