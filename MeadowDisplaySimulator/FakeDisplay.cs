@@ -1,6 +1,8 @@
 ﻿using Meadow.Foundation;
-using Meadow.Foundation.Displays;
+using Meadow.Foundation.Graphics;
+using Meadow.Foundation.Graphics.Buffers;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -8,20 +10,23 @@ using System.Windows.Media.Imaging;
 namespace MeadowDisplaySimulator
 {
     // Implement a Meadow Display that can write to the WPF gui
-    public class FakeDisplay : DisplayBase
+    public class FakeDisplay : IGraphicsDisplay
     {
-        public override DisplayColorMode ColorMode => DisplayColorMode.Format24bppRgb888;
+        public ColorType ColorMode => pixelbuffer.ColorMode;
 
-        public override int Width => width;
+        public int Width => width;
 
-        public override int Height => height;
+        public int Height => height;
 
         protected int width;
         protected int height;
         protected WriteableBitmap bitmap;
         protected Int32Rect r;
         protected Color Default;
-        protected byte[] pixels;    // we will "draw" on this byte arrary until Show then it is written to the WBM
+
+        private IPixelBuffer pixelbuffer;
+
+        public IPixelBuffer PixelBuffer => pixelbuffer;
 
         /// <summary>
         /// Construct the display with a WritableBitmap
@@ -36,57 +41,43 @@ namespace MeadowDisplaySimulator
             this.width = width;
             this.height = height;
 
-            r = new Int32Rect(0, 0, (int)width, (int)height);
+            r = new Int32Rect(0, 0, width - 1, height - 1);
             Default = Color.White;
 
-            pixels = new byte[width * height * 4];
+            pixelbuffer = new PixelBuffer(width, height);
 
             // Display noise until clear like a real display
             AddNoise();
         }
 
-        public override void Clear(bool updateDisplay = false)
+        // Draw a Buffer to the Display
+        public void WriteBuffer(int x, int y, IPixelBuffer displayBuffer)
         {
-            byte[] b = Color2Byte(Color.Black);
-            pixels = new byte[width * height * 4];
-            for (int pos = 0; pos < pixels.Length; pos += 4)
-            {
-                pixels[pos] = b[0];
-                pixels[pos + 1] = b[1];
-                pixels[pos + 2] = b[2];
-                pixels[pos + 3] = b[3];
-            }
+            for (int xx = x; x < width; x++)
+                for (int yy = y; y < height; y++)
+                    DrawPixel(xx, yy, displayBuffer.GetPixel(xx, yy));
+        }
+
+        public void Clear(bool updateDisplay = false)
+        {
+            Debug.WriteLine($"Clear {updateDisplay}");
+            pixelbuffer.Clear();
 
             if (updateDisplay)
                 Show();
         }
 
-        public override void DrawPixel(int x, int y, Color color)
+        public void DrawPixel(int x, int y, Color color)
         {
             if (x >= width || x < 0)
-            {
-                if (IgnoreOutOfBoundsPixels)
-                    return;
-                else
-                    throw new ArgumentException("OutOfBounds", nameof(x));
-            }
+                return;
             if (y >= height || y < 0)
-            {
-                if (IgnoreOutOfBoundsPixels)
-                    return;
-                else
-                    throw new ArgumentException("OutOfBounds", nameof(y));
-            }
+                return;
 
-            byte[] b = Color2Byte(color);
-            var pos = (int)(x + y * width) * 4;
-            pixels[pos] = b[0];
-            pixels[pos + 1] = b[1];
-            pixels[pos + 2] = b[2];
-            pixels[pos + 3] = b[3];
+            pixelbuffer.SetPixel(x, y, color);
         }
 
-        public override void DrawPixel(int x, int y, bool colored)
+        public void DrawPixel(int x, int y, bool colored)
         {
             if (colored)
                 DrawPixel(x, y, Default);
@@ -97,79 +88,68 @@ namespace MeadowDisplaySimulator
         /// <summary>
         /// Invert the color of a single pixel
         /// </summary>
-        public override void InvertPixel(int x, int y)
+        public void InvertPixel(int x, int y)
         {
             if (x >= width || x < 0)
-            {
-                if (IgnoreOutOfBoundsPixels)
-                    return;
-                else
-                    throw new ArgumentException("OutOfBounds", nameof(x));
-            }
+                return;
+
             if (y >= height || y < 0)
-            {
-                if (IgnoreOutOfBoundsPixels)
-                    return;
-                else
-                    throw new ArgumentException("OutOfBounds", nameof(y));
-            }
+                return;
 
-            var pos = (int)(x + y * width) * 4;
-            byte[] b = new byte[4] { pixels[pos], pixels[pos + 1], pixels[pos + 2], pixels[pos + 3] };
-
-            // invert BRG not A
-            b[0] = (byte)(255 - b[0]);
-            b[1] = (byte)(255 - b[1]);
-            b[2] = (byte)(255 - b[2]);
-
-            pixels[pos] = b[0];
-            pixels[pos + 1] = b[1];
-            pixels[pos + 2] = b[2];
-            pixels[pos + 3] = b[3];
+            Color c = pixelbuffer.GetPixel(x, y);
+            pixelbuffer.SetPixel(x, y, new Color((byte)(255 - c.R), (byte)(255 - c.G), (byte)(255 - c.B)));
         }
 
-        public override void DrawPixel(int x, int y)
+        int showcount = 0;
+        public void Show()
         {
-            DrawPixel(x, y, Default);
-        }
+            Debug.WriteLine($"Show! {showcount++} {DateTime.Now.TimeOfDay}");
 
-        public override void SetPenColor(Color pen)
-        {
-            Default = pen;
-        }
-
-        public override void Show()
-        {
             // update on the UI thread
-            App.Current.Dispatcher.Invoke(new Action(() =>
+            Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                bitmap.WritePixels(r, pixels, bitmap.BackBufferStride, 0, 0);
+                // Calling this method is the equivalent of using the Lock and Unlock workflow described in the WriteableBitmap class remarks.
+                //bitmap.Lock();
+                bitmap.WritePixels(r, pixelbuffer.Buffer, bitmap.BackBufferStride, 0, 0);
+
+                //bitmap.AddDirtyRect(r);
+                //bitmap.Unlock();
 
                 if (Directory.Exists(SnapShotPath))
                     SaveSnapShot(bitmap.Clone());
             }));
         }
 
+        public void Show(int left, int top, int right, int bottom)
+        {
+            // just show everything
+            Show();
+        }
+
+        public void Fill(Color fillColor, bool updateDisplay = false)
+        {
+            Fill(0, 0, Width, Height, fillColor);
+
+            if (updateDisplay)
+                Show();
+        }
+
+        public void Fill(int x, int y, int width, int height, Color fillColor)
+        {
+            for (int yy = y; yy < y + height; yy++)
+                for (int xx = x; xx < x + width; xx++)
+                    DrawPixel(xx, yy, fillColor);
+        }
+
+        #region Snapshot
+
         // Set the SnapShotPath to a valid directory, and a screenshot will be saved each time show is called
         public string SnapShotPath { get; set; } = null;
-
-        // Meadow colors are 4 doubles, 0.0 to 1.0 but we want bytes 0 - 255
-        // PixelFormats.Pbgra32
-        private byte[] Color2Byte(Color c)
-        {
-            return new byte[]
-            {
-                (byte)(c.B * 255),
-                (byte)(c.G * 255),
-                (byte)(c.R * 255),
-                (byte)(c.A * 255)
-            };
-        }
 
         private void AddNoise()
         {
             var rand = new Random();
-            rand.NextBytes(pixels);
+            rand.NextBytes(pixelbuffer.Buffer);
             Show();
         }
 
@@ -178,12 +158,10 @@ namespace MeadowDisplaySimulator
         {
             string filename = SnapShotFilename();
             {
-                using (FileStream stream = new FileStream(filename, FileMode.Create))
-                {
-                    PngBitmapEncoder encoder = new PngBitmapEncoder();
-                    encoder.Frames.Add(BitmapFrame.Create(img));
-                    encoder.Save(stream);
-                }
+                using FileStream stream = new(filename, FileMode.Create);
+                PngBitmapEncoder encoder = new();
+                encoder.Frames.Add(BitmapFrame.Create(img));
+                encoder.Save(stream);
             }
         }
 
@@ -192,5 +170,7 @@ namespace MeadowDisplaySimulator
         {
             return Path.Combine(SnapShotPath, "MeadowSS_" + DateTime.Now.ToString("o").Replace(":", "") + ".png");
         }
+
+        #endregion
     }
 }

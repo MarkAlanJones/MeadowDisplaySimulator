@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
+using System.Windows;
 using System.Windows.Media.Imaging;
 using Color = Meadow.Foundation.Color;
 
@@ -16,17 +17,16 @@ namespace MeadowDisplaySimulator
     /// </summary>
     public class MeadowApp
     {
-        FakeDisplay display;
-        GraphicsLibrary graphics;
-        int displayWidth = 240;
-        int displayHeight = 240;
-
-        Random rand = new Random();
+        private FakeDisplay display;
+        private MicroGraphics graphics;
+        private readonly int displayWidth = 240;
+        private readonly int displayHeight = 240;
+        private readonly Random rand = new Random();
 
         public MeadowApp(System.Windows.Controls.Image wpfimage)
         {
             // initialize on UI thread - pass bitmap to display initializer
-            App.Current.Dispatcher.Invoke(new Action(() =>
+            Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 Initialize((WriteableBitmap)wpfimage.Source);
             }));
@@ -35,7 +35,7 @@ namespace MeadowDisplaySimulator
             Thread.Sleep(1000);
             timms += BenchLines(100);
             Thread.Sleep(1000);
-            timms += BenchPix(100);
+            timms += BenchPix(10000);
             Thread.Sleep(1000);
             timms += BenchRect(50);
             Thread.Sleep(1000);
@@ -44,23 +44,74 @@ namespace MeadowDisplaySimulator
             timms += BenchText(50);
             Thread.Sleep(1000);
 
-            Console.WriteLine($"Done {timms}ms");
+            Debug.WriteLine($"Done {timms}ms");
             DrawMeadowLogo();
-
         }
 
-        void Initialize(WriteableBitmap wbm)
+        private void Showfont(IFont font, Color c, ScaleFactor x = ScaleFactor.X1)
         {
-            Console.WriteLine("Initializing...");
+            graphics.Clear();
+
+            graphics.CurrentFont = font;
+            Debug.WriteLine(font.GetType().Name);
+
+            graphics.CurrentFont = font;
+            CharacterTest(c, x);
+
+            Thread.Sleep(1000);
+        }
+
+        private void CharacterTest(Color c, ScaleFactor x = ScaleFactor.X1)
+        {
+            string msg = string.Empty;
+
+            int yPos = 12;
+            int count = 0;
+
+            for (int i = 32; i < 254; i++)
+            {
+                if (i == 127)
+                    i += 33;
+
+
+                if (count >= ((displayWidth - 24) / (graphics.CurrentFont.Width * (int)x)) || i >= 254)
+                {
+                    graphics.DrawText(12, yPos, msg, c, x);
+                    Debug.WriteLine(msg);
+                    yPos += (graphics.CurrentFont.Height * (int)x) + 4;
+
+                    count = 0;
+                    msg = string.Empty;
+                }
+
+                msg += (char)(i);
+                count++;
+            }
+            //graphics.DrawText(12, yPos, msg, c, x);
+
+            graphics.Show();
+            Debug.WriteLine("");
+        }
+
+        /// <summary>
+        /// Initialize here 
+        /// </summary>
+        private void Initialize(WriteableBitmap wbm)
+        {
+            Debug.WriteLine("Initializing...");
 
             display = new FakeDisplay(width: displayWidth, height: displayHeight, bitmap: wbm);
-            display.IgnoreOutOfBoundsPixels = true;
-            graphics = new GraphicsLibrary(display);
-            graphics.Rotation = GraphicsLibrary.RotationType.Default;
+
+            graphics = new MicroGraphics(display)
+            {
+                Rotation = RotationType.Default
+            };
             graphics.Clear(true);
+
+            display.SnapShotPath = @"C:\Temp\MeadowFonts\";
         }
 
-        int BenchCircles(int num)
+        private int BenchCircles(int num)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -73,17 +124,17 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int empty = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Circles {empty}ms");
+            Debug.WriteLine($"{num} Circles {empty}ms");
             stopWatch.Restart();
 
             graphics.Clear(true);
             for (int i = 1; i < num; i++)
             {
-                graphics.DrawCircle(rand.Next(displayWidth), rand.Next(displayHeight), rand.Next(displayHeight / 2) + 1, RandColor(), true);
+                graphics.DrawCircle(rand.Next(displayWidth), rand.Next(displayHeight), rand.Next(displayHeight / 4) + 1, RandColor(), true);
                 graphics.Show();
             }
             int full = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Circles filled {full}ms");
+            Debug.WriteLine($"{num} Circles filled {full}ms");
             stopWatch.Restart();
 
             stopWatch.Stop();
@@ -91,7 +142,7 @@ namespace MeadowDisplaySimulator
             return empty + full;
         }
 
-        int BenchLines(int num)
+        private int BenchLines(int num)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -104,7 +155,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int l1 = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} lines {l1}ms");
+            Debug.WriteLine($"{num} lines {l1}ms");
             stopWatch.Restart();
 
             graphics.Stroke = 2;
@@ -115,7 +166,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int l2 = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} 2x lines {l2}ms");
+            Debug.WriteLine($"{num} 2x lines {l2}ms");
             stopWatch.Restart();
 
             graphics.Stroke = 3;
@@ -126,7 +177,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int l3 = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} 3x lines {l3}ms");
+            Debug.WriteLine($"{num} 3x lines {l3}ms");
             stopWatch.Restart();
 
             graphics.Stroke = 2;
@@ -137,7 +188,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int lh = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} horz lines {lh}ms");
+            Debug.WriteLine($"{num} horz lines {lh}ms");
             stopWatch.Restart();
 
             graphics.Stroke = 2;
@@ -148,7 +199,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int lv = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} vert lines {lh}ms");
+            Debug.WriteLine($"{num} vert lines {lh}ms");
             stopWatch.Restart();
 
             stopWatch.Stop();
@@ -156,7 +207,7 @@ namespace MeadowDisplaySimulator
             return l1 + l2 + l3 + lh + lv;
         }
 
-        int BenchPix(int num)
+        private int BenchPix(int num)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -166,16 +217,17 @@ namespace MeadowDisplaySimulator
             for (int i = 1; i < num; i++)
             {
                 graphics.DrawPixel(rand.Next(displayWidth), rand.Next(displayHeight), RandColor());
-                graphics.Show();
+                if (i % 100 == 0) graphics.Show();
             }
+            graphics.Show();
             int p1 = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Pixel {p1}ms");
+            Debug.WriteLine($"{num} Pixel {p1}ms");
             stopWatch.Stop();
 
             return p1;
         }
 
-        int BenchRect(int num)
+        private int BenchRect(int num)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -188,7 +240,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int empty = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Rectangle {empty}ms");
+            Debug.WriteLine($"{num} Rectangle {empty}ms");
             stopWatch.Restart();
 
             graphics.Clear(true);
@@ -198,13 +250,13 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int filled = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Rectangle Filled {filled}ms");
+            Debug.WriteLine($"{num} Rectangle Filled {filled}ms");
             stopWatch.Stop();
 
             return empty + filled;
         }
 
-        int BenchTriangle(int num)
+        private int BenchTriangle(int num)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -219,7 +271,7 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int empty = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Triangles {empty}ms");
+            Debug.WriteLine($"{num} Triangles {empty}ms");
             stopWatch.Restart();
 
             graphics.Clear(true);
@@ -231,16 +283,17 @@ namespace MeadowDisplaySimulator
                 graphics.Show();
             }
             int filled = (int)stopWatch.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"{num} Triangles Filled {filled}ms");
+            Debug.WriteLine($"{num} Triangles Filled {filled}ms");
             stopWatch.Stop();
 
             return empty + filled;
         }
 
-
-        int BenchText(int num)
+        private int BenchText(int num)
         {
-            List<FontBase> AvailbleFonts = new List<FontBase>() { new Font8x8(), new Font8x12(), new Font4x8(), new Font12x20(), new Font12x16() };
+            List<IFont> AvailbleFonts = new List<IFont>() { new Font8x8(), new Font8x12(), new Font8x16(),
+                                                            new Font4x6(), new Font4x8(),
+                                                            new Font12x16(), new Font12x20()};
 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -252,26 +305,31 @@ namespace MeadowDisplaySimulator
             {
                 graphics.CurrentFont = font;
                 graphics.Clear(true);
+
+                Showfont(font, Color.HotPink);
+
                 for (int i = 1; i < num / 3; i++)
                 {
                     graphics.DrawText(rand.Next(displayWidth), rand.Next(displayHeight),
-                                      "Meadow F7", RandColor(), GraphicsLibrary.ScaleFactor.X1);
+                                      "Meadow F7", RandColor(), ScaleFactor.X1);
                     graphics.DrawText(rand.Next(displayWidth), rand.Next(displayHeight),
-                                      "Meadow F7", RandColor(), GraphicsLibrary.ScaleFactor.X2);
+                                      "Meadow F7", RandColor(), ScaleFactor.X2);
                     graphics.DrawText(rand.Next(displayWidth), rand.Next(displayHeight),
-                                      "Meadow F7", RandColor(), GraphicsLibrary.ScaleFactor.X3);
+                                      "Meadow F7", RandColor(), ScaleFactor.X3);
                     graphics.Show();
                 }
                 int f0 = (int)stopWatch.Elapsed.TotalMilliseconds;
                 f1 += f0;
-                Console.WriteLine($"{num} Text Font{font.Width}x{font.Height} {f0}ms");
+                Debug.WriteLine($"{num} Text Font{font.Width}x{font.Height} {f0}ms");
                 stopWatch.Restart();
+
+                Thread.Sleep(1000);
             }
 
             return f1;
         }
 
-        void DrawMeadowLogo()
+        private void DrawMeadowLogo()
         {
             graphics.Clear();
 
@@ -315,13 +373,12 @@ namespace MeadowDisplaySimulator
             }
 
             graphics.CurrentFont = new Font8x12();
-            graphics.DrawText(4, bottom + 10, "meadow", Color.DimGray, GraphicsLibrary.ScaleFactor.X2);
-            graphics.DrawText(112, bottom + 18, "F7", Color.DimGray, GraphicsLibrary.ScaleFactor.X1);
+            graphics.DrawText(4, bottom + 10, "meadow", Color.DimGray, ScaleFactor.X2);
+            graphics.DrawText(112, bottom + 18, "F7", Color.DimGray, ScaleFactor.X1);
             graphics.Show();
-
         }
 
-        Color RandColor()
+        private Color RandColor()
         {
             return Color.FromRgb(rand.Next(255), rand.Next(255), rand.Next(255));
         }
