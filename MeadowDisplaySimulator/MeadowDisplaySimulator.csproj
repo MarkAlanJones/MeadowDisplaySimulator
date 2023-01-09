@@ -16,8 +16,9 @@
 		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Meadow" Version="0.92.5" />
+		<PackageReference Include="Meadow" Version="0.92.6" />
 		<PackageReference Include="Meadow.Foundation" Version="0.92.5" />
 		<PackageReference Include="Meadow.Foundation.Displays.MicroGraphics" Version="0.92.5" />
+		<PackageReference Include="WriteableBitmapEx" Version="1.6.8" />
 	</ItemGroup>
 </Project>

@@ -1,11 +1,13 @@
-﻿using Meadow.Foundation;
-using Meadow.Foundation.Graphics;
+﻿using Meadow.Foundation.Graphics;
 using Meadow.Foundation.Graphics.Buffers;
+using Meadow.Peripherals.Sensors.Location.Gnss;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using static System.Windows.Media.Imaging.WriteableBitmapExtensions;
+using Color = Meadow.Foundation.Color;
 
 namespace MeadowDisplaySimulator
 {
@@ -149,13 +151,13 @@ namespace MeadowDisplaySimulator
         }
 
         // Writes the display image to a new PNG image in the SnapShotPath
-        private void SaveSnapShot(BitmapSource img)
+        private void SaveSnapShot(WriteableBitmap img)
         {
             string filename = SnapShotFilename();
             {
                 using FileStream stream = new(filename, FileMode.Create);
-                PngBitmapEncoder encoder = new();
-                encoder.Frames.Add(BitmapFrame.Create(img));
+                PngBitmapEncoder encoder = new();               
+                encoder.Frames.Add(BitmapFrame.Create(img.Flip(FlipMode.Horizontal).Rotate(90)));
                 encoder.Save(stream);
             }
         }
