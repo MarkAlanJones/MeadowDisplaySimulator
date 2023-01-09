@@ -92,14 +92,7 @@ namespace MeadowDisplaySimulator
         /// </summary>
         public void InvertPixel(int x, int y)
         {
-            if (x >= width || x < 0)
-                return;
-
-            if (y >= height || y < 0)
-                return;
-
-            Color c = pixelbuffer.GetPixel(x, y);
-            pixelbuffer.SetPixel(x, y, new Color((byte)(255 - c.R), (byte)(255 - c.G), (byte)(255 - c.B)));
+            pixelbuffer.InvertPixel(x, y);
         }
 
         int showcount = 0;

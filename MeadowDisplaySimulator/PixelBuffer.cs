@@ -61,16 +61,20 @@ namespace MeadowDisplaySimulator
         {
             for (int y = originY; y < Math.Min(Height, originY + height); y++)
                 for (int x = originX; x < Math.Min(Width, originX + width); x++)
-                {
                     c[x * Width + y] = color;
-                }
         }
 
         public Color GetPixel(int x, int y) => c[x * Width + y];
 
         public void InvertPixel(int x, int y)
         {
-            throw new System.NotImplementedException();
+            if (x >= width || x < 0)
+                return;
+            if (y >= height || y < 0)
+                return;
+
+            Color c = GetPixel(x, y);
+            SetPixel(x, y, new Color((byte)(255 - c.R), (byte)(255 - c.G), (byte)(255 - c.B)));
         }
 
         public void SetPixel(int x, int y, Color color)
