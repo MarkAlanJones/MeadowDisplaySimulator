@@ -153,13 +153,11 @@ namespace MeadowDisplaySimulator
         // Writes the display image to a new PNG image in the SnapShotPath
         private void SaveSnapShot(WriteableBitmap img)
         {
-            string filename = SnapShotFilename();
-            {
-                using FileStream stream = new(filename, FileMode.Create);
-                PngBitmapEncoder encoder = new();               
-                encoder.Frames.Add(BitmapFrame.Create(img.Flip(FlipMode.Horizontal).Rotate(90)));
-                encoder.Save(stream);
-            }
+            var filename = SnapShotFilename();
+            using FileStream stream = new(filename, FileMode.Create);
+            PngBitmapEncoder encoder = new();
+            encoder.Frames.Add(BitmapFrame.Create(img.Flip(FlipMode.Horizontal).Rotate(90)));
+            encoder.Save(stream);
         }
 
         // Timestamped filename .png
