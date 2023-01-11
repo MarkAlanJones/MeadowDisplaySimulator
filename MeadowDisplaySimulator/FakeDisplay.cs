@@ -1,6 +1,5 @@
 ﻿using Meadow.Foundation.Graphics;
 using Meadow.Foundation.Graphics.Buffers;
-using Meadow.Peripherals.Sensors.Location.Gnss;
 using System;
 using System.Diagnostics;
 using System.IO;

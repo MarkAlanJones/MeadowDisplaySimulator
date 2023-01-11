@@ -68,9 +68,9 @@ namespace MeadowDisplaySimulator
 
         public void InvertPixel(int x, int y)
         {
-            if (x >= width || x < 0)
+            if (x >= Width || x < 0)
                 return;
-            if (y >= height || y < 0)
+            if (y >= Height || y < 0)
                 return;
 
             Color c = GetPixel(x, y);
@@ -96,7 +96,7 @@ namespace MeadowDisplaySimulator
             for (int y = 0; y < Height; y++)
                 for (int x = 0; x < Width; x++)
                 {
-                    var pc = (x * Width + y);
+                    var pc = (y * Width + x);
                     var b = pc * bpp;
 
                     // B G R A
