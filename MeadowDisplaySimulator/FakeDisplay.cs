@@ -13,8 +13,10 @@ namespace MeadowDisplaySimulator
     // Implement a Meadow Display that can write to the WPF gui
     public class FakeDisplay : IGraphicsDisplay
     {
-        public ColorType ColorMode => pixelbuffer.ColorMode;
+        public ColorMode ColorMode => pixelbuffer.ColorMode;
 
+        public ColorMode SupportedColorModes => ColorMode.Format24bppRgb888 &
+                                                ColorMode.Format32bppRgba8888;
         public int Width => width;
 
         public int Height => height;

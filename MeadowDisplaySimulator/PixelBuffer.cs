@@ -17,7 +17,7 @@ namespace MeadowDisplaySimulator
 
         public int Height => height;
 
-        public ColorType ColorMode => ColorType.Format32bppRgba8888;
+        public ColorMode ColorMode => ColorMode.Format32bppRgba8888;
 
         public int BitDepth => 24;
 

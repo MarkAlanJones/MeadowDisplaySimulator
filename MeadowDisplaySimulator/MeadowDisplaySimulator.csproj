@@ -14,11 +14,11 @@
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
 		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-	</PropertyGroup>
+	</PropertyGroup>	
 	<ItemGroup>
-		<PackageReference Include="Meadow" Version="0.92.6" />
-		<PackageReference Include="Meadow.Foundation" Version="0.92.5" />
-		<PackageReference Include="Meadow.Foundation.Displays.MicroGraphics" Version="0.92.5" />
+		<PackageReference Include="Meadow" Version="0.94.0" />
+		<PackageReference Include="Meadow.Foundation" Version="0.94.1" />
+		<PackageReference Include="Meadow.Foundation.Graphics.MicroGraphics" Version="0.94.1" />
 		<PackageReference Include="WriteableBitmapEx" Version="1.6.8" />
 	</ItemGroup>
 </Project>
