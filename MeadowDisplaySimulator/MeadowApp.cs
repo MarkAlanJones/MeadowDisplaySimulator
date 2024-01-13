@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using Color = Meadow.Foundation.Color;
+using Color = Meadow.Color;
 
 namespace MeadowDisplaySimulator
 {

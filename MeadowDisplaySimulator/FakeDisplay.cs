@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using static System.Windows.Media.Imaging.WriteableBitmapExtensions;
-using Color = Meadow.Foundation.Color;
+using Color = Meadow.Color;
 
 namespace MeadowDisplaySimulator
 {
