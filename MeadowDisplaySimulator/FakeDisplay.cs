@@ -1,5 +1,4 @@
-﻿using Meadow.Foundation.Graphics;
-using Meadow.Foundation.Graphics.Buffers;
+﻿using Meadow.Peripherals.Displays;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -11,7 +10,7 @@ using Color = Meadow.Color;
 namespace MeadowDisplaySimulator
 {
     // Implement a Meadow Display that can write to the WPF gui
-    public class FakeDisplay : IGraphicsDisplay
+    public class FakeDisplay : IPixelDisplay
     {
         public ColorMode ColorMode => pixelbuffer.ColorMode;
 
@@ -27,7 +26,7 @@ namespace MeadowDisplaySimulator
         protected Int32Rect r;
         protected Color Default;
 
-        private IPixelBuffer pixelbuffer;
+        private readonly IPixelBuffer pixelbuffer;
 
         public IPixelBuffer PixelBuffer => pixelbuffer;
 

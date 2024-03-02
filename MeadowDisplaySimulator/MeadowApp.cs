@@ -1,4 +1,5 @@
 ﻿using Meadow.Foundation.Graphics;
+using Meadow.Peripherals.Displays;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,7 +22,7 @@ namespace MeadowDisplaySimulator
         private MicroGraphics graphics;
         private readonly int displayWidth = 240;
         private readonly int displayHeight = 240;
-        private readonly Random rand = new Random();
+        private readonly Random rand = new();
 
         public MeadowApp(System.Windows.Controls.Image wpfimage)
         {
@@ -113,7 +114,7 @@ namespace MeadowDisplaySimulator
 
         private int BenchCircles(int num)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
@@ -144,7 +145,7 @@ namespace MeadowDisplaySimulator
 
         private int BenchLines(int num)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
@@ -209,7 +210,7 @@ namespace MeadowDisplaySimulator
 
         private int BenchPix(int num)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
@@ -229,7 +230,7 @@ namespace MeadowDisplaySimulator
 
         private int BenchRect(int num)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
@@ -258,7 +259,7 @@ namespace MeadowDisplaySimulator
 
         private int BenchTriangle(int num)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
@@ -291,11 +292,11 @@ namespace MeadowDisplaySimulator
 
         private int BenchText(int num)
         {
-            List<IFont> AvailbleFonts = new List<IFont>() { new Font8x8(), new Font8x12(), new Font8x16(),
+            List<IFont> AvailbleFonts = new() { new Font8x8(), new Font8x12(), new Font8x16(),
                                                             new Font4x6(), new Font4x8(),
                                                             new Font12x16(), new Font12x20()};
 
-            Stopwatch stopWatch = new Stopwatch();
+            Stopwatch stopWatch = new();
             stopWatch.Start();
 
             graphics.Stroke = 1;
