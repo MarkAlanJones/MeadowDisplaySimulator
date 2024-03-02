@@ -26,6 +26,6 @@ If you want screenshots saved automatically, just set the display.SnapShotPath t
 
 ![Screenshot with Meadow Logo](MeadowDisplaySimulator.png)
 
-Of Note: This is now a .net 7 Wpf App (Windows Only) - use of the .net standard meadow nugets is fine.
+Of Note: This is now a .net 8 Wpf App (Windows Only) - use of the .net standard meadow nugets is fine.
 
 Software Rendering had to be enabled to get around issues with the Intel Xe Graphics Drivers and WritableBitmaps
