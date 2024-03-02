@@ -30,7 +30,7 @@ namespace MeadowDisplaySimulator
         }
 
         // Run the meadow app - may run forever !
-        private void InitializeMeadow(Image meadowdisplay)
+        private static void InitializeMeadow(Image meadowdisplay)
         {
             // Run the meadow code on a background thread, it will have to dispatch to UI to update bitmap
             Task.Factory.StartNew(() => new MeadowApp(meadowdisplay));
@@ -41,9 +41,7 @@ namespace MeadowDisplaySimulator
         // issue on Windows 11 - Intel(R) Iris(R) Xe Graphics
         protected override void OnSourceInitialized(EventArgs e)
         {
-            var hwndSource = PresentationSource.FromVisual(this) as HwndSource;
-
-            if (hwndSource != null)
+            if (PresentationSource.FromVisual(this) is HwndSource hwndSource)
                 hwndSource.CompositionTarget.RenderMode = RenderMode.SoftwareOnly;
 
             base.OnSourceInitialized(e);

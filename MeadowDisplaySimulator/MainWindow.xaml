@@ -8,7 +8,7 @@
     Title="Meadow Display Simulator"
     Width="400"
     Height="310"
-    Loaded="Window_Loaded" 
+    Loaded="Window_Loaded"
     mc:Ignorable="d">
     <Grid Background="#FF222222">
         <Grid.ColumnDefinitions>
@@ -26,16 +26,16 @@
             Grid.Column="1"
             BorderBrush="#FF333333"
             BorderThickness="5">
-            <Image 
-                x:Name="SPIDisplay" 
-                MinWidth="240"  
-                MinHeight="240" >
-                <!-- Fix orientation of Bitmap -->
-                <Image.LayoutTransform >
+            <Image
+                x:Name="SPIDisplay"
+                MinWidth="240"
+                MinHeight="240">
+                <!--  Fix orientation of Bitmap  -->
+                <Image.LayoutTransform>
                     <TransformGroup>
                         <RotateTransform Angle="90" />
-                        <ScaleTransform ScaleX="-1"/>
-                    </TransformGroup>                    
+                        <ScaleTransform ScaleX="-1" />
+                    </TransformGroup>
                 </Image.LayoutTransform>
             </Image>
         </Border>

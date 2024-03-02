@@ -40,6 +40,10 @@ namespace MeadowDisplaySimulator
             Thread.Sleep(1000);
             timms += BenchRect(50);
             Thread.Sleep(1000);
+            timms += BenchRoundedRect(50);
+            Thread.Sleep(1000);
+            timms += BenchGradient(150);
+            Thread.Sleep(1000);
             timms += BenchTriangle(50);
             Thread.Sleep(1000);
             timms += BenchText(50);
@@ -255,6 +259,72 @@ namespace MeadowDisplaySimulator
             stopWatch.Stop();
 
             return empty + filled;
+        }
+
+        private int BenchRoundedRect(int num)
+        {
+            Stopwatch stopWatch = new();
+            stopWatch.Start();
+
+            graphics.Stroke = 1;
+            graphics.Clear(true);
+            for (int i = 1; i < num; i++)
+            {
+                graphics.DrawRoundedRectangle(rand.Next(displayWidth), rand.Next(displayHeight),
+                                              rand.Next(displayWidth), rand.Next(displayHeight),
+                                              rand.Next(25), RandColor(), false);
+                graphics.Show();
+            }
+            int empty = (int)stopWatch.Elapsed.TotalMilliseconds;
+            Debug.WriteLine($"{num} Rounded Rectangle {empty}ms");
+            stopWatch.Restart();
+
+            graphics.Clear(true);
+            for (int i = 1; i < num; i++)
+            {
+                graphics.DrawRoundedRectangle(rand.Next(displayWidth), rand.Next(displayHeight),
+                                              rand.Next(displayWidth), rand.Next(displayHeight),
+                                              rand.Next(25), RandColor(), true);
+                graphics.Show();
+            }
+            int filled = (int)stopWatch.Elapsed.TotalMilliseconds;
+            Debug.WriteLine($"{num} Rounded Rectangle Filled {filled}ms");
+            stopWatch.Stop();
+
+            return empty + filled;
+        }
+
+        private int BenchGradient(int num)
+        {
+            Stopwatch stopWatch = new();
+            stopWatch.Start();
+
+            graphics.Stroke = 1;
+            graphics.Clear(true);
+            for (int i = 1; i < num; i++)
+            {
+                graphics.DrawHorizontalGradient(rand.Next(displayWidth), rand.Next(displayHeight),
+                                                rand.Next(displayWidth), rand.Next(displayHeight),
+                                                RandColor(), RandColor());
+                graphics.Show();
+            }
+            int hg = (int)stopWatch.Elapsed.TotalMilliseconds;
+            Debug.WriteLine($"{num} Horz Gradients {hg}ms");
+            stopWatch.Restart();
+
+            graphics.Clear(true);
+            for (int i = 1; i < num; i++)
+            {
+                graphics.DrawVerticalGradient(rand.Next(displayWidth), rand.Next(displayHeight),
+                                              rand.Next(displayWidth), rand.Next(displayHeight),
+                                              RandColor(), RandColor());
+                graphics.Show();
+            }
+            int vg = (int)stopWatch.Elapsed.TotalMilliseconds;
+            Debug.WriteLine($"{num} Vertical Gradients {vg}ms");
+            stopWatch.Stop();
+
+            return hg + vg;
         }
 
         private int BenchTriangle(int num)
