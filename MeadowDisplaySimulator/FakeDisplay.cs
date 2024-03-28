@@ -26,7 +26,7 @@ namespace MeadowDisplaySimulator
         protected Int32Rect r;
         protected Color Default;
 
-        private readonly IPixelBuffer pixelbuffer;
+        private readonly PixelBuffer pixelbuffer;
 
         public IPixelBuffer PixelBuffer => pixelbuffer;
 

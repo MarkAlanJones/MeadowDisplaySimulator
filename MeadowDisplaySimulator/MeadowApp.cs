@@ -362,9 +362,9 @@ namespace MeadowDisplaySimulator
 
         private int BenchText(int num)
         {
-            List<IFont> AvailbleFonts = new() { new Font8x8(), new Font8x12(), new Font8x16(),
-                                                            new Font4x6(), new Font4x8(),
-                                                            new Font12x16(), new Font12x20()};
+            List<IFont> AvailbleFonts = [ new Font8x8(), new Font8x12(), new Font8x16(),
+                                          new Font4x6(), new Font4x8(),
+                                          new Font12x16(), new Font12x20()];
 
             Stopwatch stopWatch = new();
             stopWatch.Start();
